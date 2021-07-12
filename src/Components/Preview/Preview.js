@@ -10,7 +10,11 @@ function Preview(props) {
         <div className="preview-container">
             <div className="general-info">
                 <h2>{generalInfo[0].firstName} {generalInfo[0].lastName}</h2>
-                <h3>{generalInfo[0].role}</h3>
+                <h3>{generalInfo[0].role}</h3> 
+                {console.log(education)}
+                {education.map((item,index)=>{
+                    return <li key= {index}>{item.university}</li>
+                })}
             </div>
             
         </div>

@@ -112,7 +112,7 @@ function App() {
       <h1> General Information </h1>
             <Form>
                {
-                   generalInfo.map((item,index)=> (
+                   generalInfo.map((item,index)=> {
                     <Fragment key={`${item}~${index}`}>
         
                         <Row>
@@ -182,7 +182,7 @@ function App() {
                           </Col>
                         </Row>
                     </Fragment>
-                   ))
+                   })
                }
             </Form>
         </div>
