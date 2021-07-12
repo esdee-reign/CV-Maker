@@ -113,6 +113,7 @@ function App() {
             <Form>
                {
                    generalInfo.map((item,index)=> {
+                     return(
                     <Fragment key={`${item}~${index}`}>
         
                         <Row>
@@ -182,7 +183,8 @@ function App() {
                           </Col>
                         </Row>
                     </Fragment>
-                   })
+                  );
+                })
                }
             </Form>
         </div>
@@ -190,7 +192,8 @@ function App() {
             <h1> Education </h1>
             <Form>
                {
-                   education.map((item,index)=> (
+                   education.map((item,index)=> {
+                     return (
                     <Fragment key={`${item}~${index}`}>
         
                         <Row>
@@ -257,7 +260,8 @@ function App() {
                         </Row>
                         <Button variant="danger" onClick={() => handleDeleteFieldsEdu(index)}>Delete</Button>
                     </Fragment>
-                   ))
+                   );
+                   })
                }
             </Form>
             <Button onClick={() => handleAddFieldsEdu()}>Add</Button>
