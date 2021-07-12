@@ -4,18 +4,22 @@
   height: 100vw;
 }
 
+.form-container {
+  padding-bottom: 20px;
+}
+
 .component-container {
   text-align: center;
   width: 40%;
   margin: 0 auto;
   font-size: 32px;
-  background-color: #e2f3f5;
+  background-color: #c5e3f6;
   border-radius: 8px;
 }
 
 .heading {
   color: #2e2e2e;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 input {
@@ -35,4 +39,12 @@ input {
   color:gray;
   font-weight: 100;
   font-size: large;
+}
+
+Form {
+  padding: 10px 40px;
+}
+
+.style{
+  color: black;
 }

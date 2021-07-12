@@ -3,3 +3,11 @@
     border: none !important;
     color: black !important;
 }
+
+.form {
+    width: 90%;
+}
+
+.delete-button {
+    width: 10%;
+}
