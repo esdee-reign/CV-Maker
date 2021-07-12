@@ -1,23 +1,22 @@
 import './App.css';
-import GeneralInformation from '../GeneralInformation/GeneralInformation';
 import {Form,Row,Col,Button} from 'react-bootstrap';
 import { useState , Fragment} from 'react';
+import Preview from '../Preview/Preview';
 
 
 
 function App() {
-  const [generalInfo, setGeneralInfo] =  useState([{firstname:"", lastname:"", role:"", email:"", number:"", location:""}]);
+  const [generalInfo, setGeneralInfo] =  useState([{firstName:"", lastName:"", role:"", email:"", number:"", location:""}]);
   const [education, setEducation] = useState([{university:"", degree: "", subject: "", city: "", from:"", to:""}]);
   const [experience, setExperience] = useState([{company:"", role: "", city: "", from:"", to:""}]);
 
   const handleInputChangeGen = (index, e) =>{
     const values = [...generalInfo];
-        console.log(e.target.name);
         if (e.target.name === "firstname") {
-          values[index].firstname = e.target.value;
+          values[index].firstName = e.target.value;
         } 
         else if (e.target.name === "lastname") {
-            values[index].lastname = e.target.value;
+            values[index].lastName = e.target.value;
           } 
           else if (e.target.name === "role") {
             values[index].role = e.target.value;
@@ -38,7 +37,6 @@ function App() {
 
     const handleInputChangeEdu = (index,e) => {
         const values = [...education];
-        console.log(e.target.name);
         if (e.target.name === "university") {
           values[index].university = e.target.value;
         } 
@@ -63,7 +61,6 @@ function App() {
 
     const handleInputChangeExp = (index,e) => {
       const values = [...experience];
-      console.log(e.target.name);
       if (e.target.name === "company") {
         values[index].company = e.target.value;
       } 
@@ -125,7 +122,7 @@ function App() {
                                 type="text" 
                                 name="firstname"
                                 placeholder="First name" 
-                                value={item.firstname}  
+                                value={item.firstName}  
                                 onChange = { e =>  handleInputChangeGen(index,e)}
                                 />
                           </Col>
@@ -136,7 +133,7 @@ function App() {
                                 type="text" 
                                 name="lastname"
                                 placeholder="Last name" 
-                                value={item.lastname}  
+                                value={item.lastName}  
                                 onChange = { e =>  handleInputChangeGen(index,e)}
                                 />
                           </Col>
@@ -335,6 +332,9 @@ function App() {
         </div>
         <Button onClick={() => handleAddFieldsExp()}>Add</Button>
       </div>
+      <div>
+      <Preview generalInfo = {generalInfo} education = {education} experience = {experience}/>
+    </div>
 </div>
   )
 }
