@@ -1,3 +1,10 @@
 .preview-container {
     border: 1px solid black;
+    padding-bottom: 20px;
+    width: 60%;
+    margin-left: 21%;
+    
+}
+.form-container{
+    margin-top: 3%;
 }
