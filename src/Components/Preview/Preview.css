@@ -1,8 +1,9 @@
 .preview-container {
     border: 1px solid black;
     padding-bottom: 20px;
-    width: 60%;
+    width: 50%;
     margin-left: 21%;
+    overflow: hidden;
     
 }
 .form-container{

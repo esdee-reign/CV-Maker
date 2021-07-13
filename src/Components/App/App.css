@@ -6,9 +6,12 @@
 
 .form-container {
   padding-bottom: 20px;
+  
 }
 
 .component-container {
+  float: left;
+  overflow: hidden;
   text-align: center;
   width: 50%;
   margin: 0 auto;
