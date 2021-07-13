@@ -1,11 +1,25 @@
-.preview-container {
+.preview {
     border: 1px solid black;
-    padding-bottom: 20px;
-    width: 50%;
-    margin-left: 21%;
+    padding: 20px;
+    width: 45%;
+    margin-left: 53%;
+    margin-top: 2%;
     overflow: hidden;
     
 }
 .form-container{
     margin-top: 3%;
+}
+
+.large {
+    font-size: large;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.detail {
+    padding: 0 !important;
+    margin: 0 !important;
 }

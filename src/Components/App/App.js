@@ -109,7 +109,7 @@ function App() {
     <div className="App">
       <div className="component-container">
           <div className="form-container">
-            <h1> General Information </h1>
+            <h1 className="heading"> General Information </h1>
             <Form>
               {
                   generalInfo.map((item,index)=> {
@@ -118,67 +118,67 @@ function App() {
         
                         <Row>
                           <Col>
-                            <Form.Label>First Name</Form.Label>
                             <Form.Control
                                 type="text" 
                                 name="firstname"
                                 placeholder="First name" 
                                 value={item.firstName}  
                                 onChange = { e =>  handleInputChangeGen(index,e)}
+                                className="input"
                                 />
                           </Col>
                       
                           <Col>
-                            <Form.Label>Last Name</Form.Label>
                             <Form.Control
                                 type="text" 
                                 name="lastname"
                                 placeholder="Last name" 
                                 value={item.lastName}  
                                 onChange = { e =>  handleInputChangeGen(index,e)}
+                                className="input"
                                 />
                           </Col>
                         </Row>
                         <Row>
-                          <Form.Label>Role</Form.Label>
                           <Form.Control
                               type="text" 
                               name="role"
                               placeholder="Role" 
                               value={item.role}  
                               onChange = { e =>  handleInputChangeGen(index,e)}
+                              className="input"
                               />
                         </Row>
                         <Row>
-                          <Form.Label>Email</Form.Label>
                           <Form.Control
                               type="email" 
                               name="email"
                               placeholder="Email" 
                               value={item.email}
-                              onChange = { e =>  handleInputChangeGen(index,e)}  
+                              onChange = { e =>  handleInputChangeGen(index,e)}
+                              className="input"
                               />
                         </Row>
                         <Row>
                           <Col>
-                            <Form.Label>Phone</Form.Label>
                             <Form.Control
                                 type="tel" 
                                 name="number"
                                 placeholder="Phone" 
                                 value={item.phone} 
                                 onChange = { e =>  handleInputChangeGen(index,e)} 
+                                className="input"
                                 />
                           </Col>
 
                           <Col>
-                            <Form.Label>Location</Form.Label>
                             <Form.Control
                                 type="text" 
                                 name="location"
                                 placeholder="Location" 
                                 value={item.location}  
                                 onChange = { e =>  handleInputChangeGen(index,e)}
+                                className="input"
                                 />
                           </Col>
                         </Row>
@@ -188,8 +188,9 @@ function App() {
               }
             </Form>
             </div>
+        
             <div className="form-container">
-                <h1> Education </h1>
+                <h1 className="heading"> Education </h1>
                 <Form>
                   {
                       education.map((item,index)=> {
@@ -197,64 +198,64 @@ function App() {
                         <Fragment key={`${item}~${index}`}>
             
                             <Row>
-                              <Form.Label>University</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="university"
                                   placeholder="University" 
                                   value={item.university}  
                                   onChange = { e =>  handleInputChangeEdu(index,e)}
+                                  className="input"
                                   />
                             </Row>
                             <Row>
-                              <Form.Label>City</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="city"
                                   placeholder="City" 
                                   value={item.city}  
                                   onChange = { e =>  handleInputChangeEdu(index,e)}
+                                  className="input"
                                   />
                             </Row>
                             <Row>
-                              <Form.Label>Degree</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="degree"
                                   placeholder="Degree" 
                                   value={item.degree}  
                                   onChange = { e =>  handleInputChangeEdu(index,e)}
+                                  className="input"
                                   />
                             </Row>
                             <Row>
-                              <Form.Label>Subject</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="subject"
                                   placeholder="Subject" 
                                   value={item.subject}
-                                  onChange = { e =>  handleInputChangeEdu(index,e)}  
+                                  onChange = { e =>  handleInputChangeEdu(index,e)}
+                                  className="input"
                                   />
                             </Row>
                             <Row>
                                 <Col>
-                              <Form.Label>From</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="from"
                                   placeholder="From" 
                                   value={item.from} 
                                   onChange = { e =>  handleInputChangeEdu(index,e)} 
+                                  className="input"
                                   />
                                   </Col>
                                   <Col>
-                              <Form.Label>To</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="to"
                                   placeholder="To" 
                                   value={item.to}  
                                   onChange = { e =>  handleInputChangeEdu(index,e)}
+                                  className="input"
                                   />
                             </Col>
                             </Row>
@@ -267,7 +268,7 @@ function App() {
                 <Button onClick={() => handleAddFieldsEdu()}>Add</Button>
             </div>
         <div className="form-container">
-          <h1> Experience </h1>
+          <h1 className="heading"> Experience </h1>
                 <Form>
                   {
                       experience.map((item,index)=> (
@@ -275,56 +276,56 @@ function App() {
             
                             <Row>
                               <Col>
-                                <Form.Label>Company</Form.Label>
                                 <Form.Control
                                     type="text" 
                                     name="company"
                                     placeholder="Company" 
                                     value={item.company}  
                                     onChange = { e =>  handleInputChangeExp(index,e)}
+                                    className="input"
                                     />
                               </Col>
                           
                               <Col>
-                                <Form.Label>Role</Form.Label>
                                 <Form.Control
                                     type="text" 
                                     name="role"
                                     placeholder="Role" 
                                     value={item.role}  
                                     onChange = { e =>  handleInputChangeExp(index,e)}
+                                    className="input"
                                     />
                               </Col>
                             </Row>
                             <Row>
-                              <Form.Label>City</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="city"
                                   placeholder="City" 
                                   value={item.city}  
                                   onChange = { e =>  handleInputChangeExp(index,e)}
+                                  className="input"
                                   />
                             </Row>
                             <Row>
                                 <Col>
-                              <Form.Label>From</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="from"
                                   placeholder="From" 
                                   value={item.from} 
                                   onChange = { e =>  handleInputChangeExp(index,e)} 
+                                  className="input"
                                   />
                                   </Col>
                                   <Col>
-                              <Form.Label>To</Form.Label>
                               <Form.Control
                                   type="text" 
                                   name="to"
                                   placeholder="To" 
                                   value={item.to}  
                                   onChange = { e =>  handleInputChangeExp(index,e)}
+                                  className="input"
                                   />
                             </Col>
                             </Row>

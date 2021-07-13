@@ -21,10 +21,37 @@ function Preview(props) {
                 <div className="preview-location">
                     {props.generalInfo[0].location}  
                 </div>
-                {console.log(props.education)}
+            </div>
+            <hr />
+            <div className="education">
                 {props.education.map((item,index)=>{
-                    return <li key= {index}>{item.university}</li>
-                })}
+                        return ( 
+                            <div>
+                                <p className="large bold" key= {index}>{item.university}</p>
+                                <p className="" key= {index}>{item.city}</p>
+                                <p className="" key= {index}>{item.degree}</p>
+                                <p className="" key= {index}>{item.subject}</p>
+                                <p className="" key= {index}>{item.from}</p>
+                                <p className="" key= {index}>{item.to}</p>
+                                <hr />
+                            </div>
+                        )
+                    })}
+            </div>
+            
+            <div className="experience">
+                {props.experience.map((item,index)=>{
+                        return ( 
+                            <div>
+                                <p key= {index}>{item.company}</p>
+                                <p key= {index}>{item.city}</p>
+                                <p key= {index}>{item.role}</p>
+                                <p key= {index}>{item.from}</p>
+                                <p key= {index}>{item.to}</p>
+                                <hr />
+                            </div>
+                        )
+                    })}
             </div>
             </div>
         )

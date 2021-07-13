@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: 100vw;
 }
@@ -9,20 +9,25 @@
   
 }
 
+.input {
+  margin-bottom: 16px;
+}
+
 .component-container {
   float: left;
   overflow: hidden;
   text-align: center;
-  width: 50%;
-  margin: 0 auto;
+  width: 45%;
   font-size: 32px;
   background-color: #c5e3f6;
+  margin-left: 3%;
   border-radius: 8px;
 }
 
 .heading {
   color: #2e2e2e;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 input {
