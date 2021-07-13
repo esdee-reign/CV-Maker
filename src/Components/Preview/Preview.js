@@ -6,25 +6,22 @@ import './Preview.css';
 function Preview(props) {
     return (
         <div className="preview">
-            <div className="general-info">
-                <div >
-                </div>
-        
-                <div className="preview-name">
+            <div className="">
+                <div className="large bold">
                     <h2>{props.generalInfo[0].firstName} {props.generalInfo[0].lastName}</h2>  
                 </div>
-                <div className="preview-role">
+                <p className="preview-role">
                     {props.generalInfo[0].role}  
-                </div>
-                <div className="preview-location">
+                </p>
+                <p className="preview-location">
                     {props.generalInfo[0].location}  
-                </div>
-                <div className="preview-phone">
+                </p>
+                <p className="preview-phone">
                     {props.generalInfo[0].number}    
-                </div>
-                <div className="preview-email">
+                </p>
+                <p className="preview-email">
                     {props.generalInfo[0].email}  
-                </div>
+                </p>
             </div>
             <hr />
             <div className="preview-heading">
@@ -36,8 +33,8 @@ function Preview(props) {
                             <div>
                                 <Row className="preview-row"> 
                                 <Col>
-                                <p className="large bold" key= {index}>{item.university}</p>
-                                <p className="" key= {index}>{item.city}</p>
+                                <p className="large bold" key= {index}>{item.university} , {item.city}</p>
+                                <p className="" key= {index}></p>
                                 <p className="" key= {index}>Degree- {item.degree}</p>
                                 <p className="" key= {index}>Subject- {item.subject}</p>
                                 </Col>
@@ -58,11 +55,17 @@ function Preview(props) {
                 {props.experience.map((item,index)=>{
                         return ( 
                             <div>
-                                <p key= {index}>{item.company}</p>
-                                <p key= {index}>{item.city}</p>
-                                <p key= {index}>{item.role}</p>
-                                <p key= {index}>{item.from}</p>
-                                <p key= {index}>{item.to}</p>
+                                <Row className="preview-row">
+                                    <Col>
+                                        <p className= "large bold" key= {index}>{item.role}</p>
+                                        <p key= {index}>{item.company} , {item.city}</p>
+                                        {/* <p key= {index}></p> */}
+                                        
+                                </Col>
+                                <Col className="right">
+                                        <p key= {index}>{item.from}-{item.to}</p>
+                                </Col>
+                                </Row>
                                 <hr />
                             </div>
                         )
