@@ -4,6 +4,8 @@ import './Preview.css';
 
 function Preview(props) {
     return (
+        <div className="form-container">
+            <h1>Preview</h1>
         <div className="preview-container">
             <div className="general-info">
                 <h2>{props.generalInfo[0].firstName} {props.generalInfo[0].lastName}</h2>
@@ -13,7 +15,7 @@ function Preview(props) {
                     return <li key= {index}>{item.university}</li>
                 })}
             </div>
-            
+            </div>
         </div>
     )
 }
