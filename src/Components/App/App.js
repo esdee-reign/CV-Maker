@@ -195,8 +195,7 @@ function App() {
                   {
                       education.map((item,index)=> {
                         return (
-                        <Fragment key={`${item}~${index}`}>
-            
+                        <Fragment className="education-fragment" key={`${item}~${index}`}>
                             <Row>
                               <Form.Control
                                   type="text" 
@@ -273,7 +272,6 @@ function App() {
                   {
                       experience.map((item,index)=> (
                         <Fragment key={`${item}~${index}`}>
-            
                             <Row>
                               <Col>
                                 <Form.Control
