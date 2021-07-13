@@ -1,11 +1,14 @@
 import React from 'react';
 import {Row,Col} from 'react-bootstrap';
 import './Preview.css';
-
+import Pdf from "react-to-pdf";
 
 function Preview(props) {
+
+    const ref = React.createRef();
+
     return (
-        <div className="preview">
+        <div className="preview" ref={ref}>
             <div className="">
                 <div className="large bold">
                     <h2>{props.generalInfo[0].firstName} {props.generalInfo[0].lastName}</h2>  
@@ -58,20 +61,23 @@ function Preview(props) {
                                 <Row className="preview-row">
                                     <Col>
                                         <p className= "large bold" key= {index}>{item.role}</p>
-                                        <p key= {index}>{item.company} , {item.city}</p>
-                                        {/* <p key= {index}></p> */}
-                                        
-                                </Col>
-                                <Col className="right">
-                                        <p key= {index}>{item.from}-{item.to}</p>
-                                </Col>
+                                        <p key= {index}>{item.company} , {item.city}</p>                                        
+                                    </Col>
+                                    <Col className="right">
+                                            <p key= {index}>{item.from}-{item.to}</p>
+                                    </Col>
                                 </Row>
                                 <hr />
                             </div>
                         )
                     })}
             </div>
-            </div>
+
+            <Pdf targetRef={ref} filename="Resume.pdf">
+                {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+            </Pdf>
+
+        </div>
         )
 }
 

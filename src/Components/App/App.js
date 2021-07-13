@@ -115,7 +115,7 @@ function App() {
                   generalInfo.map((item,index)=> {
                     return(
                     <Fragment key={`${item}~${index}`}>
-        
+      
                         <Row>
                           <Col>
                             <Form.Control
@@ -332,9 +332,9 @@ function App() {
                       ))
                   }
                 </Form>
-            </div>
             <Button onClick={() => handleAddFieldsExp()}>Add</Button>
-          </div>
+            </div>
+        </div>
     <div className="preview-container">
       <Preview generalInfo = {generalInfo} education = {education} experience = {experience}/>
     </div>

@@ -1,11 +1,12 @@
 .preview {
-    border: 1px solid black;
     padding: 20px;
     width: 45%;
     margin-left: 52%;
     margin-top: 2%;
     overflow: hidden;
-    
+    background-color: #c5e3f6;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgb(158, 158, 158);
 }
 .form-container{
     margin-top: 3%;

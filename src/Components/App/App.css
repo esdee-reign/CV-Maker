@@ -22,6 +22,8 @@
   background-color: #c5e3f6;
   margin-left: 3%;
   border-radius: 8px;
+  box-shadow: 10px 5px 5px rgb(158, 158, 158);
+
 }
 
 .heading {
@@ -59,4 +61,8 @@ Form {
 
 .education-fragment {
   margin-top: 20px;
+}
+
+.experience-fragment {
+  margin-top: 40px;
 }
