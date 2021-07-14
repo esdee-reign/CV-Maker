@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row,Col} from 'react-bootstrap';
+import {Row,Col,Button} from 'react-bootstrap';
 import './Preview.css';
 import Pdf from "react-to-pdf";
 
@@ -8,8 +8,9 @@ function Preview(props) {
     const ref = React.createRef();
 
     return (
-        <div className="preview" ref={ref}>
-            <div className="">
+        <div className="preview">
+            <div  ref={ref}>
+                <div className="">
                 <div className="large bold">
                     <h2>{props.generalInfo[0].firstName} {props.generalInfo[0].lastName}</h2>  
                 </div>
@@ -26,11 +27,11 @@ function Preview(props) {
                     {props.generalInfo[0].email}  
                 </p>
             </div>
-            <hr />
-            <div className="preview-heading">
+                <hr />
+                <div className="preview-heading">
                 <h3>Education</h3> 
             </div>
-            <div className="education">
+                <div className="education">
                 {props.education.map((item,index)=>{
                         return ( 
                             <div>
@@ -51,7 +52,7 @@ function Preview(props) {
                     })}
             </div>
             
-            <div className="experience">
+                <div className="experience">
                 <div className="preview-heading">
                     <h3>Experience</h3> 
                 </div>
@@ -72,11 +73,10 @@ function Preview(props) {
                         )
                     })}
             </div>
-
-            <Pdf targetRef={ref} filename="Resume.pdf">
-                {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+            </div>
+                <Pdf targetRef={ref} size="A4" orientation="landscape" filename="Resume.pdf">
+                {({ toPdf }) => <Button variant="danger" onClick={toPdf}>Generate Pdf</Button>}
             </Pdf>
-
         </div>
         )
 }
